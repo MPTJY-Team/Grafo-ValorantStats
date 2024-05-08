@@ -21,7 +21,7 @@ diretorio = "Arquivo CSV/Arquivo_transicao"
 
 
 def extrair_tabela(table_name, csv_filename):
-    sql = f"SELECT * FROM {table_name}"  # Query SQL
+    sql = f"SELECT * FROM {table_name}"
 
     # Executa a query e salva os resultados em um dataframe
     df = pd.read_sql(sql, con)

@@ -1,0 +1,35 @@
+- Mostrar a tabela : 
+
+MATCH (a:Agent)
+RETURN a
+
+- Relacionar as tabelas:
+
+MATCH (a:Agent)-[:JOGA_COM]->(p:Player)
+RETURN a.AGENT AS Agente, p.PLAYER AS Jogador
+
+- Mostrar as ligações do nos: 
+
+MATCH (a:Agent)-[r]->(p:Player)
+RETURN a, r, p
+
+- Criar mais relacionamentos: 
+
+MATCH (a:Agent), (m:Map)
+CREATE (a)-[:JOGA_EM]->(m)
+
+- Mostrar as ligação : 
+
+MATCH (m:Map)-[:JOGA_EM]->(a:Agent)
+RETURN m, a
+
+
+
+
+
+
+
+
+
+
+
